@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "lasthurttimer1",
+  "version": "1.0",
+  "name": "LastHurtTimer",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/lasthurttimer1/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "fabric-datagen": [
+      "me.PapaCarloMarx.lasthurttimer1.client.LasthurttimerDataGenerator"
+    ],
+    "client": [
+      "me.PapaCarloMarx.lasthurttimer1.client.LasthurttimerClient"
+    ],
+    "main": [
+      "me.PapaCarloMarx.lasthurttimer1.Lasthurttimer"
+    ]
+  },
+  "mixins":
+  [
+    "lasthurttimer1.mixins.json",
+    {
+      "config": "lasthurttimer1.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
